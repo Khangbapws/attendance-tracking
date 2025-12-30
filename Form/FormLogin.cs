@@ -26,5 +26,10 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
         {
 
         }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+            //khang
+        }
     }
 }

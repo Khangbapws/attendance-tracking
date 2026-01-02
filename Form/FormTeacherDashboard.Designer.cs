@@ -28,12 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnEnterGrades = new System.Windows.Forms.Button();
+            this.btnViewGrades = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnEnterGrades
+            // 
+            this.btnEnterGrades.Location = new System.Drawing.Point(136, 88);
+            this.btnEnterGrades.Name = "btnEnterGrades";
+            this.btnEnterGrades.Size = new System.Drawing.Size(285, 93);
+            this.btnEnterGrades.TabIndex = 0;
+            this.btnEnterGrades.Text = "Enter Grades";
+            this.btnEnterGrades.UseVisualStyleBackColor = true;
+            this.btnEnterGrades.Click += new System.EventHandler(this.btnEnterGrades_Click);
+            // 
+            // btnViewGrades
+            // 
+            this.btnViewGrades.Location = new System.Drawing.Point(587, 88);
+            this.btnViewGrades.Name = "btnViewGrades";
+            this.btnViewGrades.Size = new System.Drawing.Size(277, 94);
+            this.btnViewGrades.TabIndex = 1;
+            this.btnViewGrades.Text = "View Grades";
+            this.btnViewGrades.UseVisualStyleBackColor = true;
+            this.btnViewGrades.Click += new System.EventHandler(this.btnViewGrades_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(347, 373);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(294, 120);
+            this.btnLogout.TabIndex = 2;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // FormTeacherDashboard
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1009, 608);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.btnViewGrades);
+            this.Controls.Add(this.btnEnterGrades);
+            this.Name = "FormTeacherDashboard";
             this.Text = "Form2";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnEnterGrades;
+        private System.Windows.Forms.Button btnViewGrades;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

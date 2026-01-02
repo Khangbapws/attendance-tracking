@@ -37,13 +37,13 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
             }
             if (rbTeacher.Checked)
             {
-                FormTeacherDashboard teacherForm = new FormTeacherDashboard();
+                FormTeacherDashboard teacherForm = new FormTeacherDashboard(this);
                 teacherForm.Show();
                 this.Hide();
             }
             else if (rbSecretary.Checked)
             {
-                FormSecretaryDashboard secretaryForm = new FormSecretaryDashboard();
+                FormSecretaryDashboard secretaryForm = new FormSecretaryDashboard(this);
                 secretaryForm.Show();
                 this.Hide();
             }

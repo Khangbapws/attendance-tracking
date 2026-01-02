@@ -28,12 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnManageStudents = new System.Windows.Forms.Button();
+            this.btnReports = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnManageStudents
+            // 
+            this.btnManageStudents.Location = new System.Drawing.Point(184, 132);
+            this.btnManageStudents.Name = "btnManageStudents";
+            this.btnManageStudents.Size = new System.Drawing.Size(251, 123);
+            this.btnManageStudents.TabIndex = 0;
+            this.btnManageStudents.Text = "Manage Students";
+            this.btnManageStudents.UseVisualStyleBackColor = true;
+            this.btnManageStudents.Click += new System.EventHandler(this.btnManageStudents_Click);
+            // 
+            // btnReports
+            // 
+            this.btnReports.Location = new System.Drawing.Point(748, 132);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Size = new System.Drawing.Size(259, 123);
+            this.btnReports.TabIndex = 1;
+            this.btnReports.Text = "Reports";
+            this.btnReports.UseVisualStyleBackColor = true;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(494, 430);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(234, 137);
+            this.btnLogout.TabIndex = 2;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // FormSecretaryDashboard
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1287, 720);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.btnReports);
+            this.Controls.Add(this.btnManageStudents);
+            this.Name = "FormSecretaryDashboard";
             this.Text = "Form3";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnManageStudents;
+        private System.Windows.Forms.Button btnReports;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

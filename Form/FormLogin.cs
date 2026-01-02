@@ -15,6 +15,7 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
         public FormLogin()
         {
             InitializeComponent();
+          //rbTeacher.Checked = true;
         }
 
         private void FormLogin_Load(object sender, EventArgs e)
@@ -24,12 +25,69 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrWhiteSpace(txtUsername.Text))
+            {
+                MessageBox.Show(
+                    "Please enter username.",
+                    "Login error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                    );
+                return;
+            }
+            if (rbTeacher.Checked)
+            {
+                FormTeacherDashboard teacherForm = new FormTeacherDashboard();
+                teacherForm.Show();
+                this.Hide();
+            }
+            else if (rbSecretary.Checked)
+            {
+                FormSecretaryDashboard secretaryForm = new FormSecretaryDashboard();
+                secretaryForm.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show(
+                   "Please select a role.",
+                   "Login error",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Warning
+               );
+            }
         }
 
         private void lblTitle_Click(object sender, EventArgs e)
         {
-            //khang
+            
+        }
+
+        private void txtUsername_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void groupRole_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbSecretary_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbTeacher_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        private void lblUsername_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

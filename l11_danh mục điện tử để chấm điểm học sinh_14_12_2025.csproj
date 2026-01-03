@@ -108,6 +108,9 @@
     <EmbeddedResource Include="Form\FormTeacherDashboard.resx">
       <DependentUpon>FormTeacherDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormViewGrades.resx">
+      <DependentUpon>FormViewGrades.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

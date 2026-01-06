@@ -1,15 +1,16 @@
-﻿using System;
-using System.IO;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
 
 
 namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
@@ -117,65 +118,22 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
 
         private void btnExportPdf_Click(object sender, EventArgs e)
         {
-            if (dgvStudents.Rows.Count == 0)
-            {
-                MessageBox.Show("No data to export.");
-                return;
-            }
-
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.Filter = "PDF Files (*.pdf)|*.pdf";
             sfd.FileName = "StudentList.pdf";
 
             if (sfd.ShowDialog() == DialogResult.OK)
             {
-                ExportStudentsToPdf(sfd.FileName);
-                MessageBox.Show("PDF exported successfully!");
+                PdfExportHelper.ExportDataGridViewToPdf(
+                    dgvStudents,
+                    sfd.FileName,
+                    "Student List"
+                );
+
+                MessageBox.Show("PDF exported successfully.");
             }
-        }
-
-        private void ExportStudentsToPdf(string filePath)
-        {
-            Document document = new Document(PageSize.A4);
-            PdfWriter.GetInstance(document, new FileStream(filePath, FileMode.Create));
-
-            document.Open();
-
-            // Title
-            Paragraph title = new Paragraph(
-                "Student List",
-                FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16)
-            );
-            title.Alignment = Element.ALIGN_CENTER;
-            document.Add(title);
-            document.Add(new Paragraph(" "));
-
-            // Table
-            PdfPTable table = new PdfPTable(dgvStudents.Columns.Count);
-            table.WidthPercentage = 100;
-
-            // Header
-            foreach (DataGridViewColumn column in dgvStudents.Columns)
-            {
-                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
-                cell.BackgroundColor = BaseColor.LIGHT_GRAY;
-                table.AddCell(cell);
-            }
-
-            // Rows
-            foreach (DataGridViewRow row in dgvStudents.Rows)
-            {
-                if (row.IsNewRow) continue;
-
-                foreach (DataGridViewCell cell in row.Cells)
-                {
-                    table.AddCell(cell.Value?.ToString());
-                }
-            }
-
-            document.Add(table);
-            document.Close();
         }
 
     }
 }
+

@@ -33,6 +33,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnClose = new System.Windows.Forms.Button();
+            this.btnExportPdf = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrades)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,19 +78,30 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(462, 584);
+            this.btnClose.Location = new System.Drawing.Point(204, 584);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(128, 70);
+            this.btnClose.Size = new System.Drawing.Size(212, 70);
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnExportPdf
+            // 
+            this.btnExportPdf.Location = new System.Drawing.Point(539, 584);
+            this.btnExportPdf.Name = "btnExportPdf";
+            this.btnExportPdf.Size = new System.Drawing.Size(226, 70);
+            this.btnExportPdf.TabIndex = 2;
+            this.btnExportPdf.Text = "Export PDF";
+            this.btnExportPdf.UseVisualStyleBackColor = true;
+            this.btnExportPdf.Click += new System.EventHandler(this.btnExportPdf_Click);
             // 
             // FormViewGrades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1044, 666);
+            this.Controls.Add(this.btnExportPdf);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dgvGrades);
             this.Name = "FormViewGrades";
@@ -106,5 +118,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnExportPdf;
     }
 }

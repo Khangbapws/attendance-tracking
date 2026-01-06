@@ -100,6 +100,7 @@
     <Compile Include="Form\FormUsabilityQuestionaire.Designer.cs">
       <DependentUpon>FormUsabilityQuestionaire.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\PdfExportHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form\FormEnterGrades.resx">

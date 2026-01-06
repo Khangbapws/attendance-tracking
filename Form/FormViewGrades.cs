@@ -1,4 +1,5 @@
-﻿using System;
+﻿using l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -67,6 +68,24 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnExportPdf_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "PDF Files (*.pdf)|*.pdf";
+            sfd.FileName = "StudentGradeReport.pdf";
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                PdfExportHelper.ExportDataGridViewToPdf(
+                    dgvGrades,
+                    sfd.FileName,
+                    "Student Grade Report"
+                );
+
+                MessageBox.Show("PDF exported successfully.");
+            }
         }
     }
 }

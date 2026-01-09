@@ -112,6 +112,9 @@
     <EmbeddedResource Include="Form\FormManageStudents.resx">
       <DependentUpon>FormManageStudents.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormReports.resx">
+      <DependentUpon>FormReports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FormSecretaryDashboard.resx">
       <DependentUpon>FormSecretaryDashboard.cs</DependentUpon>
     </EmbeddedResource>

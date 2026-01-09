@@ -14,7 +14,7 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
 {
     public partial class FormReports : Form
     {
-        string filePath = "Studentgrades.txt";
+        string filePath = "grades.txt";
         public FormReports()
         {
             InitializeComponent();

@@ -63,9 +63,9 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ảnh_thẻ {
+        internal static System.Drawing.Bitmap bg_main {
             get {
-                object obj = ResourceManager.GetObject("ảnh thẻ", resourceCulture);
+                object obj = ResourceManager.GetObject("bg_main", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

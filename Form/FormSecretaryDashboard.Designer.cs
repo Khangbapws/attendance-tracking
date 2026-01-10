@@ -31,6 +31,7 @@
             this.btnManageStudents = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.btnFeedback = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnManageStudents
@@ -63,11 +64,22 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // btnFeedback
+            // 
+            this.btnFeedback.Location = new System.Drawing.Point(1105, 629);
+            this.btnFeedback.Name = "btnFeedback";
+            this.btnFeedback.Size = new System.Drawing.Size(170, 79);
+            this.btnFeedback.TabIndex = 9;
+            this.btnFeedback.Text = "Feedback";
+            this.btnFeedback.UseVisualStyleBackColor = true;
+            this.btnFeedback.Click += new System.EventHandler(this.btnFeedback_Click);
+            // 
             // FormSecretaryDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1287, 720);
+            this.Controls.Add(this.btnFeedback);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnReports);
             this.Controls.Add(this.btnManageStudents);
@@ -82,5 +94,6 @@
         private System.Windows.Forms.Button btnManageStudents;
         private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnFeedback;
     }
 }

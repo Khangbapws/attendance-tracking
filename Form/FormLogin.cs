@@ -1,4 +1,5 @@
-﻿using System;
+﻿using l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +16,8 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
         public FormLogin()
         {
             InitializeComponent();
-          //rbTeacher.Checked = true;
+            //rbTeacher.Checked = true;
+            
         }
 
         private void FormLogin_Load(object sender, EventArgs e)
@@ -88,6 +90,12 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
         private void lblUsername_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnFeedback_Click(object sender, EventArgs e)
+        {
+            FormUsabilityQuestionnaire f = new FormUsabilityQuestionnaire();
+            f.ShowDialog();
         }
     }
 }

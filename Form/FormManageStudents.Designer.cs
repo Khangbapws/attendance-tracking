@@ -37,6 +37,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnExportPdf = new System.Windows.Forms.Button();
+            this.btnFeedback = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,11 +126,22 @@
             this.btnExportPdf.UseVisualStyleBackColor = true;
             this.btnExportPdf.Click += new System.EventHandler(this.btnExportPdf_Click);
             // 
+            // btnFeedback
+            // 
+            this.btnFeedback.Location = new System.Drawing.Point(1429, 941);
+            this.btnFeedback.Name = "btnFeedback";
+            this.btnFeedback.Size = new System.Drawing.Size(170, 79);
+            this.btnFeedback.TabIndex = 9;
+            this.btnFeedback.Text = "Feedback";
+            this.btnFeedback.UseVisualStyleBackColor = true;
+            this.btnFeedback.Click += new System.EventHandler(this.btnFeedback_Click);
+            // 
             // FormManageStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1611, 1032);
+            this.Controls.Add(this.btnFeedback);
             this.Controls.Add(this.btnExportPdf);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnDelete);
@@ -158,5 +170,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnExportPdf;
+        private System.Windows.Forms.Button btnFeedback;
     }
 }

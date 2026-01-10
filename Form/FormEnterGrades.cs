@@ -1,4 +1,5 @@
-﻿using System;
+﻿using l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -83,6 +84,12 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
             txtSubject.Clear();
             txtGrade.Clear();
             txtStudentName.Focus();
+        }
+
+        private void btnFeedback_Click(object sender, EventArgs e)
+        {
+            FormUsabilityQuestionnaire f = new FormUsabilityQuestionnaire();
+            f.ShowDialog();
         }
     }
 }

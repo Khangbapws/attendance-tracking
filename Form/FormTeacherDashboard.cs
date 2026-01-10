@@ -36,5 +36,11 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
             loginForm.Show();
             this.Close();
         }
+
+        private void btnFeedback_Click(object sender, EventArgs e)
+        {
+            FormUsabilityQuestionnaire f = new FormUsabilityQuestionnaire();
+            f.ShowDialog();
+        }
     }
 }

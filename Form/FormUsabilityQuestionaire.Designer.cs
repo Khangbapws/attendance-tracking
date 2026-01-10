@@ -1,6 +1,6 @@
 ﻿namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
 {
-    partial class FormUsabilityQuestionaire
+    partial class FormUsabilityQuestionnaire
     {
         /// <summary>
         /// Required designer variable.
@@ -300,7 +300,7 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // FormUsabilityQuestionaire
+            // FormUsabilityQuestionnaire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -312,8 +312,8 @@
             this.Controls.Add(this.grpUsefulness);
             this.Controls.Add(this.grpPracticality);
             this.Controls.Add(this.lblTitle);
-            this.Name = "FormUsabilityQuestionaire";
-            this.Text = "UsabilityQuestionaire";
+            this.Name = "FormUsabilityQuestionnaire";
+            this.Text = "UsabilityQuestionnaire";
             this.grpPracticality.ResumeLayout(false);
             this.grpPracticality.PerformLayout();
             this.grpUsefulness.ResumeLayout(false);

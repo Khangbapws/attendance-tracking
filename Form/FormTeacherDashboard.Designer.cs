@@ -31,6 +31,7 @@
             this.btnEnterGrades = new System.Windows.Forms.Button();
             this.btnViewGrades = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.btnFeedback = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnEnterGrades
@@ -63,11 +64,22 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // btnFeedback
+            // 
+            this.btnFeedback.Location = new System.Drawing.Point(827, 517);
+            this.btnFeedback.Name = "btnFeedback";
+            this.btnFeedback.Size = new System.Drawing.Size(170, 79);
+            this.btnFeedback.TabIndex = 9;
+            this.btnFeedback.Text = "Feedback";
+            this.btnFeedback.UseVisualStyleBackColor = true;
+            this.btnFeedback.Click += new System.EventHandler(this.btnFeedback_Click);
+            // 
             // FormTeacherDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1009, 608);
+            this.Controls.Add(this.btnFeedback);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnViewGrades);
             this.Controls.Add(this.btnEnterGrades);
@@ -82,5 +94,6 @@
         private System.Windows.Forms.Button btnEnterGrades;
         private System.Windows.Forms.Button btnViewGrades;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnFeedback;
     }
 }

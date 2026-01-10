@@ -34,6 +34,7 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnExportPdf = new System.Windows.Forms.Button();
+            this.btnFeedback = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrades)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,11 +97,22 @@
             this.btnExportPdf.UseVisualStyleBackColor = true;
             this.btnExportPdf.Click += new System.EventHandler(this.btnExportPdf_Click);
             // 
+            // btnFeedback
+            // 
+            this.btnFeedback.Location = new System.Drawing.Point(923, 620);
+            this.btnFeedback.Name = "btnFeedback";
+            this.btnFeedback.Size = new System.Drawing.Size(170, 79);
+            this.btnFeedback.TabIndex = 9;
+            this.btnFeedback.Text = "Feedback";
+            this.btnFeedback.UseVisualStyleBackColor = true;
+            this.btnFeedback.Click += new System.EventHandler(this.btnFeedback_Click);
+            // 
             // FormViewGrades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1044, 666);
+            this.ClientSize = new System.Drawing.Size(1105, 711);
+            this.Controls.Add(this.btnFeedback);
             this.Controls.Add(this.btnExportPdf);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dgvGrades);
@@ -119,5 +131,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnExportPdf;
+        private System.Windows.Forms.Button btnFeedback;
     }
 }

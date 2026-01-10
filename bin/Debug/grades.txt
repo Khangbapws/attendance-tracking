@@ -1,3 +1,4 @@
 khang|DEEA|10
 hoai phuong|kiem toan|6
 Bao|HRM|5
+Tung|may tinh|10

@@ -35,6 +35,7 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblAverage = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
+            this.btnFeedback = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrades)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,12 +110,23 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // btnFeedback
+            // 
+            this.btnFeedback.Location = new System.Drawing.Point(729, 433);
+            this.btnFeedback.Name = "btnFeedback";
+            this.btnFeedback.Size = new System.Drawing.Size(170, 79);
+            this.btnFeedback.TabIndex = 9;
+            this.btnFeedback.Text = "Feedback";
+            this.btnFeedback.UseVisualStyleBackColor = true;
+            this.btnFeedback.Click += new System.EventHandler(this.btnFeedback_Click);
+            // 
             // FormReports
             // 
             this.AcceptButton = this.btnLoadReport;
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(911, 524);
+            this.Controls.Add(this.btnFeedback);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblAverage);
             this.Controls.Add(this.lblTotal);
@@ -143,5 +155,6 @@
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label lblAverage;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnFeedback;
     }
 }

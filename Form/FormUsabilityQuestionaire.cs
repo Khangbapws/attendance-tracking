@@ -11,21 +11,21 @@ using System.Windows.Forms;
 
 namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
 {
-    public partial class FormUsabilityQuestionaire : Form
+    public partial class FormUsabilityQuestionnaire : Form
     {
         string filePath = "usability_feedback.txt";
-        public FormUsabilityQuestionaire()
+        public FormUsabilityQuestionnaire()
         {
             InitializeComponent();
             InitializeComboBoxes();
 
-            btnSubmit.Enabled = false;  
+            btnSubmit.Enabled = false;
         }
         private void InitializeComboBoxes()
         {
             ComboBox[] combos =
             {
-                comboBox1, comboBox2, comboBox3, comboBox4, 
+                comboBox1, comboBox2, comboBox3, comboBox4,
                 comboBox5, comboBox6, comboBox7, comboBox8
             };
 

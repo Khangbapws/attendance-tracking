@@ -72,7 +72,7 @@
             this.Controls.Add(this.btnViewGrades);
             this.Controls.Add(this.btnEnterGrades);
             this.Name = "FormTeacherDashboard";
-            this.Text = "Form2";
+            this.Text = "FormTeacherDashBoard";
             this.ResumeLayout(false);
 
         }

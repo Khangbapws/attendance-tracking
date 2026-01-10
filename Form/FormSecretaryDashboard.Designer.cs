@@ -72,7 +72,7 @@
             this.Controls.Add(this.btnReports);
             this.Controls.Add(this.btnManageStudents);
             this.Name = "FormSecretaryDashboard";
-            this.Text = "Form3";
+            this.Text = "SecretaryDashboard";
             this.ResumeLayout(false);
 
         }

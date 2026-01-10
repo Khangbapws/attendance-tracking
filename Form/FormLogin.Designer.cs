@@ -111,6 +111,7 @@
             // 
             // FormLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1571, 967);
@@ -122,7 +123,7 @@
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblTitle);
             this.Name = "FormLogin";
-            this.Text = "Form1";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.FormLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -105,7 +105,7 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dgvGrades);
             this.Name = "FormViewGrades";
-            this.Text = "Form5";
+            this.Text = "ViewGrades";
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrades)).EndInit();
             this.ResumeLayout(false);
 

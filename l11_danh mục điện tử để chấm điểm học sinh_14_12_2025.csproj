@@ -121,6 +121,9 @@
     <EmbeddedResource Include="Form\FormTeacherDashboard.resx">
       <DependentUpon>FormTeacherDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormUsabilityQuestionaire.resx">
+      <DependentUpon>FormUsabilityQuestionaire.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FormViewGrades.resx">
       <DependentUpon>FormViewGrades.cs</DependentUpon>
     </EmbeddedResource>

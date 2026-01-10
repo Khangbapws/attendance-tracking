@@ -140,7 +140,7 @@
             this.Controls.Add(this.txtStudentId);
             this.Controls.Add(this.dgvStudents);
             this.Name = "FormManageStudents";
-            this.Text = "Form6";
+            this.Text = "ManageStudents";
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -132,7 +132,7 @@
             this.Controls.Add(this.lblSubject);
             this.Controls.Add(this.lblStudentName);
             this.Name = "FormEnterGrades";
-            this.Text = "Form4";
+            this.Text = "EnterGrades";
             this.ResumeLayout(false);
             this.PerformLayout();
 

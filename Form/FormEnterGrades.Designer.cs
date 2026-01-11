@@ -38,61 +38,68 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnFeedback = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // lblStudentName
             // 
             this.lblStudentName.AutoSize = true;
-            this.lblStudentName.Location = new System.Drawing.Point(202, 157);
+            this.lblStudentName.Location = new System.Drawing.Point(117, 187);
             this.lblStudentName.Name = "lblStudentName";
-            this.lblStudentName.Size = new System.Drawing.Size(195, 32);
+            this.lblStudentName.Size = new System.Drawing.Size(209, 39);
             this.lblStudentName.TabIndex = 0;
             this.lblStudentName.Text = "Student Name";
             // 
             // lblSubject
             // 
             this.lblSubject.AutoSize = true;
-            this.lblSubject.Location = new System.Drawing.Point(202, 330);
+            this.lblSubject.Location = new System.Drawing.Point(117, 319);
             this.lblSubject.Name = "lblSubject";
-            this.lblSubject.Size = new System.Drawing.Size(110, 32);
+            this.lblSubject.Size = new System.Drawing.Size(117, 39);
             this.lblSubject.TabIndex = 1;
             this.lblSubject.Text = "Subject";
             // 
             // lblGrade
             // 
             this.lblGrade.AutoSize = true;
-            this.lblGrade.Location = new System.Drawing.Point(202, 495);
+            this.lblGrade.Location = new System.Drawing.Point(117, 446);
             this.lblGrade.Name = "lblGrade";
-            this.lblGrade.Size = new System.Drawing.Size(93, 32);
+            this.lblGrade.Size = new System.Drawing.Size(99, 39);
             this.lblGrade.TabIndex = 2;
             this.lblGrade.Text = "Grade";
             // 
             // txtStudentName
             // 
-            this.txtStudentName.Location = new System.Drawing.Point(455, 157);
+            this.txtStudentName.Location = new System.Drawing.Point(446, 181);
+            this.txtStudentName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStudentName.Name = "txtStudentName";
-            this.txtStudentName.Size = new System.Drawing.Size(365, 38);
+            this.txtStudentName.Size = new System.Drawing.Size(410, 45);
             this.txtStudentName.TabIndex = 3;
             // 
             // txtSubject
             // 
-            this.txtSubject.Location = new System.Drawing.Point(455, 327);
+            this.txtSubject.Location = new System.Drawing.Point(446, 313);
+            this.txtSubject.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSubject.Name = "txtSubject";
-            this.txtSubject.Size = new System.Drawing.Size(365, 38);
+            this.txtSubject.Size = new System.Drawing.Size(410, 45);
             this.txtSubject.TabIndex = 4;
             // 
             // txtGrade
             // 
-            this.txtGrade.Location = new System.Drawing.Point(455, 489);
+            this.txtGrade.Location = new System.Drawing.Point(446, 440);
+            this.txtGrade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGrade.Name = "txtGrade";
-            this.txtGrade.Size = new System.Drawing.Size(365, 38);
+            this.txtGrade.Size = new System.Drawing.Size(410, 45);
             this.txtGrade.TabIndex = 5;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(208, 697);
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Location = new System.Drawing.Point(124, 572);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(237, 121);
+            this.btnSave.Size = new System.Drawing.Size(267, 144);
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Save Grade";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -100,9 +107,12 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(619, 697);
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Location = new System.Drawing.Point(481, 572);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(242, 121);
+            this.btnClear.Size = new System.Drawing.Size(272, 144);
             this.btnClear.TabIndex = 7;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -110,9 +120,12 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(1053, 697);
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(843, 572);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(238, 121);
+            this.btnClose.Size = new System.Drawing.Size(268, 144);
             this.btnClose.TabIndex = 8;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -120,19 +133,31 @@
             // 
             // btnFeedback
             // 
-            this.btnFeedback.Location = new System.Drawing.Point(1379, 955);
+            this.btnFeedback.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFeedback.Location = new System.Drawing.Point(922, 38);
+            this.btnFeedback.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFeedback.Name = "btnFeedback";
-            this.btnFeedback.Size = new System.Drawing.Size(168, 70);
+            this.btnFeedback.Size = new System.Drawing.Size(189, 84);
             this.btnFeedback.TabIndex = 9;
             this.btnFeedback.Text = "Feedback";
             this.btnFeedback.UseVisualStyleBackColor = true;
             this.btnFeedback.Click += new System.EventHandler(this.btnFeedback_Click);
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackgroundImage = global::l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025.Properties.Resources.bg_main;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1168, 752);
+            this.flowLayoutPanel1.TabIndex = 10;
+            // 
             // FormEnterGrades
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1559, 1037);
+            this.ClientSize = new System.Drawing.Size(1168, 752);
             this.Controls.Add(this.btnFeedback);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnClear);
@@ -143,8 +168,15 @@
             this.Controls.Add(this.lblGrade);
             this.Controls.Add(this.lblSubject);
             this.Controls.Add(this.lblStudentName);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Font = new System.Drawing.Font("Times New Roman", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MinimumSize = new System.Drawing.Size(600, 420);
             this.Name = "FormEnterGrades";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EnterGrades";
+            this.Load += new System.EventHandler(this.FormEnterGrades_Load);
+            this.Resize += new System.EventHandler(this.FormEnterGrades_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,5 +194,6 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnFeedback;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

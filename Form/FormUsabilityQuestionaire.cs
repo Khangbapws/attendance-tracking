@@ -13,13 +13,63 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
 {
     public partial class FormUsabilityQuestionnaire : Form
     {
+        private Size originalFormSize;
+        private Dictionary<Control, Rectangle> controlBounds = new Dictionary<Control, Rectangle>();
+
         string filePath = "usability_feedback.txt";
         public FormUsabilityQuestionnaire()
         {
+            this.AutoScaleMode = AutoScaleMode.None; // Turn off WinForms auto-scaling
+            this.AutoScaleDimensions = new SizeF(96F, 96F); //Lock DPI
+
             InitializeComponent();
             InitializeComboBoxes();
 
             btnSubmit.Enabled = false;
+        }
+
+        private void FormUsabilityQuestionnaire_Load(object sender, EventArgs e)
+        {
+            originalFormSize = this.Size;
+            StoreSontrolBounds(this);
+
+        }
+        private void StoreSontrolBounds(Control parent)
+        {
+            foreach (Control ctrl in parent.Controls)
+            {
+                if (!controlBounds.ContainsKey(ctrl))
+                    controlBounds[ctrl] = ctrl.Bounds;
+                if (ctrl.HasChildren)
+                    StoreSontrolBounds(ctrl);
+            }
+        }
+
+        private void FormUsabilityQuestionnaire_Resize(object sender, EventArgs e)
+        {
+            float xRAtio = (float)this.Width / originalFormSize.Width;
+            float yRatio = (float)this.Height / originalFormSize.Height;
+
+            ResizeControls(this, xRAtio, yRatio);
+
+        }
+        private void ResizeControls(Control parent, float xRAtio, float yRatio)
+        {
+            foreach (Control ctrl in parent.Controls)
+            {
+                if (!controlBounds.ContainsKey(ctrl))
+                    continue;
+                Rectangle original = controlBounds[ctrl];
+                ctrl.SetBounds(
+                    (int)(original.X * xRAtio),
+                    (int)(original.Y * yRatio),
+                    (int)(original.Width * xRAtio),
+                    (int)(original.Height * yRatio)
+                );
+
+                if (ctrl.HasChildren)
+                    ResizeControls(ctrl, xRAtio, yRatio);
+            }
         }
         private void InitializeComboBoxes()
         {
@@ -37,22 +87,22 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
             }
         }
 
-        private void btnSubmit_Click(object sender, EventArgs e)
-        {
-            if (!AllQuestionsAnswered())
-            {
-                MessageBox.Show("Please answer all questions.",
-                                "Validation",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
-                return;
-            }
+        //private void btnSubmit_Click(object sender, EventArgs e)
+        //{
+        //    if (!AllQuestionsAnswered())
+        //    {
+        //        MessageBox.Show("Please answer all questions.",
+        //                        "Validation",
+        //                        MessageBoxButtons.OK,
+        //                        MessageBoxIcon.Warning);
+        //        return;
+        //    }
 
-            SaveFeedback();
-            MessageBox.Show("Thank you for your feedback!");
+        //    SaveFeedback();
+        //    MessageBox.Show("Thank you for your feedback!");
 
-            this.Close();
-        }
+        //    this.Close();
+        //}
         private bool AllQuestionsAnswered()
         {
             ComboBox[] combos =
@@ -90,14 +140,36 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
             }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        //private void btnClose_Click(object sender, EventArgs e)
+        //{
+        //    this.Close();
+        //}
 
         private void cbo_SelectedIndexChanged(object sender, EventArgs e)
         {
             btnSubmit.Enabled = AllQuestionsAnswered();
+        }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSubmit_Click_1(object sender, EventArgs e)
+        {
+            if (!AllQuestionsAnswered())
+            {
+                MessageBox.Show("Please answer all questions.",
+                                "Validation",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                return;
+            }
+
+            SaveFeedback();
+            MessageBox.Show("Thank you for your feedback!");
+
+            this.Close();
         }
     }
 }

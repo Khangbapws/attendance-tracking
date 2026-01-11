@@ -1,0 +1,22 @@
+D:\code\Lập trình web C#\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\bin\Release\BouncyCastle.Cryptography.dll
+D:\code\Lập trình web C#\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\bin\Release\itextsharp.dll
+D:\code\Lập trình web C#\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\bin\Release\BouncyCastle.Cryptography.xml
+D:\code\Lập trình web C#\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\bin\Release\itextsharp.xml
+D:\code\Lập trình web C#\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\obj\Release\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025.csproj.AssemblyReference.cache
+D:\code\Lập trình web C#\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\obj\Release\l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025.FormEnterGrades.resources
+D:\code\Lập trình web C#\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\obj\Release\l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025.FormLogin.resources
+D:\code\Lập trình web C#\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\obj\Release\l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025.FormManageStudents.resources
+D:\code\Lập trình web C#\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\obj\Release\l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025.FormReports.resources
+D:\code\Lập trình web C#\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\obj\Release\l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025.FormSecretaryDashboard.resources
+D:\code\Lập trình web C#\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\obj\Release\l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025.FormTeacherDashboard.resources
+D:\code\Lập trình web C#\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\obj\Release\l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025.FormUsabilityQuestionnaire.resources
+D:\code\Lập trình web C#\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\obj\Release\l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025.FormViewGrades.resources
+D:\code\Lập trình web C#\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\obj\Release\l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025.Properties.Resources.resources
+D:\code\Lập trình web C#\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\obj\Release\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025.csproj.GenerateResource.cache
+D:\code\Lập trình web C#\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\obj\Release\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025.csproj.CoreCompileInputs.cache
+D:\code\Lập trình web C#\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\obj\Release\l11_danh.859402D4.Up2Date
+D:\code\Lập trình web C#\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\bin\Release\L11_DanhMucChamDiem.exe.config
+D:\code\Lập trình web C#\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\bin\Release\L11_DanhMucChamDiem.exe
+D:\code\Lập trình web C#\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\bin\Release\L11_DanhMucChamDiem.pdb
+D:\code\Lập trình web C#\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\obj\Release\L11_DanhMucChamDiem.exe
+D:\code\Lập trình web C#\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\l11_danh mục điện tử để chấm điểm học sinh_14_12_2025\obj\Release\L11_DanhMucChamDiem.pdb

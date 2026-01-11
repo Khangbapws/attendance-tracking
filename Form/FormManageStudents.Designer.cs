@@ -38,49 +38,57 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnExportPdf = new System.Windows.Forms.Button();
             this.btnFeedback = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvStudents
             // 
             this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStudents.Location = new System.Drawing.Point(12, 208);
+            this.dgvStudents.Location = new System.Drawing.Point(14, 149);
+            this.dgvStudents.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvStudents.Name = "dgvStudents";
             this.dgvStudents.RowHeadersWidth = 102;
             this.dgvStudents.RowTemplate.Height = 40;
-            this.dgvStudents.Size = new System.Drawing.Size(1587, 692);
+            this.dgvStudents.Size = new System.Drawing.Size(1112, 497);
             this.dgvStudents.TabIndex = 0;
             this.dgvStudents.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudents_CellClick);
             // 
             // txtStudentId
             // 
-            this.txtStudentId.Location = new System.Drawing.Point(12, 12);
+            this.txtStudentId.Location = new System.Drawing.Point(14, 14);
+            this.txtStudentId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStudentId.Name = "txtStudentId";
-            this.txtStudentId.Size = new System.Drawing.Size(241, 38);
+            this.txtStudentId.Size = new System.Drawing.Size(271, 45);
             this.txtStudentId.TabIndex = 1;
             this.txtStudentId.Text = "ID";
             // 
             // txtStudentName
             // 
-            this.txtStudentName.Location = new System.Drawing.Point(388, 12);
+            this.txtStudentName.Location = new System.Drawing.Point(436, 14);
+            this.txtStudentName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStudentName.Name = "txtStudentName";
-            this.txtStudentName.Size = new System.Drawing.Size(241, 38);
+            this.txtStudentName.Size = new System.Drawing.Size(271, 45);
             this.txtStudentName.TabIndex = 2;
             this.txtStudentName.Text = "Name";
             // 
             // txtClass
             // 
-            this.txtClass.Location = new System.Drawing.Point(760, 12);
+            this.txtClass.Location = new System.Drawing.Point(855, 14);
+            this.txtClass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtClass.Name = "txtClass";
-            this.txtClass.Size = new System.Drawing.Size(241, 38);
+            this.txtClass.Size = new System.Drawing.Size(271, 45);
             this.txtClass.TabIndex = 3;
             this.txtClass.Text = "Class";
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(12, 83);
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Location = new System.Drawing.Point(14, 67);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(241, 62);
+            this.btnAdd.Size = new System.Drawing.Size(271, 74);
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -88,9 +96,12 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(388, 83);
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Location = new System.Drawing.Point(436, 67);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(241, 62);
+            this.btnUpdate.Size = new System.Drawing.Size(271, 74);
             this.btnUpdate.TabIndex = 5;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -98,9 +109,12 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(760, 83);
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Location = new System.Drawing.Point(855, 67);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(241, 62);
+            this.btnDelete.Size = new System.Drawing.Size(271, 74);
             this.btnDelete.TabIndex = 6;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -108,9 +122,12 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(12, 928);
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(14, 654);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(241, 62);
+            this.btnClose.Size = new System.Drawing.Size(271, 74);
             this.btnClose.TabIndex = 7;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -118,9 +135,12 @@
             // 
             // btnExportPdf
             // 
-            this.btnExportPdf.Location = new System.Drawing.Point(388, 928);
+            this.btnExportPdf.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExportPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportPdf.Location = new System.Drawing.Point(436, 654);
+            this.btnExportPdf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnExportPdf.Name = "btnExportPdf";
-            this.btnExportPdf.Size = new System.Drawing.Size(241, 62);
+            this.btnExportPdf.Size = new System.Drawing.Size(271, 74);
             this.btnExportPdf.TabIndex = 8;
             this.btnExportPdf.Text = "Export PDF";
             this.btnExportPdf.UseVisualStyleBackColor = true;
@@ -128,19 +148,31 @@
             // 
             // btnFeedback
             // 
-            this.btnFeedback.Location = new System.Drawing.Point(1429, 941);
+            this.btnFeedback.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFeedback.Location = new System.Drawing.Point(935, 654);
+            this.btnFeedback.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFeedback.Name = "btnFeedback";
-            this.btnFeedback.Size = new System.Drawing.Size(170, 79);
+            this.btnFeedback.Size = new System.Drawing.Size(191, 74);
             this.btnFeedback.TabIndex = 9;
             this.btnFeedback.Text = "Feedback";
             this.btnFeedback.UseVisualStyleBackColor = true;
             this.btnFeedback.Click += new System.EventHandler(this.btnFeedback_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025.Properties.Resources.bg_main;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1168, 752);
+            this.panel1.TabIndex = 10;
+            // 
             // FormManageStudents
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1611, 1032);
+            this.ClientSize = new System.Drawing.Size(1168, 752);
             this.Controls.Add(this.btnFeedback);
             this.Controls.Add(this.btnExportPdf);
             this.Controls.Add(this.btnClose);
@@ -151,8 +183,15 @@
             this.Controls.Add(this.txtStudentName);
             this.Controls.Add(this.txtStudentId);
             this.Controls.Add(this.dgvStudents);
+            this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Times New Roman", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MinimumSize = new System.Drawing.Size(600, 420);
             this.Name = "FormManageStudents";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManageStudents";
+            this.Load += new System.EventHandler(this.FormManageStudents_Load);
+            this.Resize += new System.EventHandler(this.FormManageStudents_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -171,5 +210,6 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnExportPdf;
         private System.Windows.Forms.Button btnFeedback;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -7,7 +7,7 @@
     <ProjectGuid>{78A21FD5-5536-4C10-8E72-58E89D0EDA13}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025</RootNamespace>
-    <AssemblyName>l11_danh mục điện tử để chấm điểm học sinh_14_12_2025</AssemblyName>
+    <AssemblyName>L11_DanhMucChamDiem</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,6 +32,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
       <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
@@ -99,9 +100,6 @@
     </Compile>
     <Compile Include="Form\FormUsabilityQuestionaire.Designer.cs">
       <DependentUpon>FormUsabilityQuestionaire.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Helpers\BaseForm.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Helpers\PdfExportHelper.cs" />
     <Compile Include="Program.cs" />

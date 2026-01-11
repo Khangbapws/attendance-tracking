@@ -14,11 +14,68 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
 {
     public partial class FormEnterGrades : Form
     {
+        string folderPath;
+        string gradesFilePath;
+
+        private Size originalFormSize;
+        private Dictionary<Control, Rectangle> controlBounds = new Dictionary<Control, Rectangle>();
         public FormEnterGrades()
         {
+            this.AutoScaleMode = AutoScaleMode.None; // Turn off WinForms auto-scaling
+            this.AutoScaleDimensions = new SizeF(96F, 96F); //Lock DPI
+
             InitializeComponent();
+
+            folderPath = Path.Combine(
+        Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+        "ElectricGradeBook"
+        );
+            if (!Directory.Exists(folderPath))
+                Directory.CreateDirectory(folderPath);
+
+            gradesFilePath = Path.Combine(folderPath, "grades.txt");
         }
 
+        private void FormEnterGrades_Load(object sender, EventArgs e)
+        {
+            originalFormSize = this.Size;
+            StoreSontrolBounds(this);
+        }
+        private void StoreSontrolBounds(Control parent)
+        {
+            foreach (Control ctrl in parent.Controls)
+            {
+                if (!controlBounds.ContainsKey(ctrl))
+                    controlBounds[ctrl] = ctrl.Bounds;
+                if (ctrl.HasChildren)
+                    StoreSontrolBounds(ctrl);
+            }
+        }
+
+        private void FormEnterGrades_Resize(object sender, EventArgs e)
+        {
+            float xRAtio = (float)this.Width / originalFormSize.Width;
+            float yRatio = (float)this.Height / originalFormSize.Height;
+
+            ResizeControls(this, xRAtio, yRatio);
+
+        }
+        private void ResizeControls(Control parent, float xRAtio, float yRatio)
+        {
+            foreach (Control ctrl in parent.Controls)
+            {
+                Rectangle original = controlBounds[ctrl];
+                ctrl.SetBounds(
+                    (int)(original.X * xRAtio),
+                    (int)(original.Y * yRatio),
+                    (int)(original.Width * xRAtio),
+                    (int)(original.Height * yRatio)
+                );
+
+                if (ctrl.HasChildren)
+                    ResizeControls(ctrl, xRAtio, yRatio);
+            }
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
             string studentName = txtStudentName.Text.Trim();
@@ -70,12 +127,11 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
         }
         private void SaveGradeToFile(string studentName, string subject, double grade)
         {
-            string filePath = "grades.txt";
             string line = $"{studentName}|{subject}|{grade}";
 
-            using (StreamWriter writer = new StreamWriter(filePath, true))
+            using (StreamWriter sw = new StreamWriter(gradesFilePath, true))
             {
-                writer.WriteLine(line);
+                sw.WriteLine(line);
             }
         }
         private void ClearFields()
@@ -91,5 +147,7 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
             FormUsabilityQuestionnaire f = new FormUsabilityQuestionnaire();
             f.ShowDialog();
         }
+
+      
     }
 }

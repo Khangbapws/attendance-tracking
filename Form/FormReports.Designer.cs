@@ -36,23 +36,30 @@
             this.lblAverage = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnFeedback = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrades)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Location = new System.Drawing.Point(196, 9);
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Times New Roman", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(248, 13);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(377, 32);
+            this.lblTitle.Size = new System.Drawing.Size(688, 61);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "STUDENT GRADE REPORT";
             // 
             // btnLoadReport
             // 
-            this.btnLoadReport.Location = new System.Drawing.Point(134, 44);
+            this.btnLoadReport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoadReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoadReport.Location = new System.Drawing.Point(151, 78);
+            this.btnLoadReport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLoadReport.Name = "btnLoadReport";
-            this.btnLoadReport.Size = new System.Drawing.Size(215, 46);
+            this.btnLoadReport.Size = new System.Drawing.Size(242, 55);
             this.btnLoadReport.TabIndex = 1;
             this.btnLoadReport.Text = "Load Report";
             this.btnLoadReport.UseVisualStyleBackColor = true;
@@ -60,9 +67,12 @@
             // 
             // btnExportPdf
             // 
-            this.btnExportPdf.Location = new System.Drawing.Point(430, 44);
+            this.btnExportPdf.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExportPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportPdf.Location = new System.Drawing.Point(786, 78);
+            this.btnExportPdf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnExportPdf.Name = "btnExportPdf";
-            this.btnExportPdf.Size = new System.Drawing.Size(221, 46);
+            this.btnExportPdf.Size = new System.Drawing.Size(249, 55);
             this.btnExportPdf.TabIndex = 2;
             this.btnExportPdf.Text = "Export PDF";
             this.btnExportPdf.UseVisualStyleBackColor = true;
@@ -74,37 +84,41 @@
             this.dgvGrades.AllowUserToDeleteRows = false;
             this.dgvGrades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvGrades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGrades.Location = new System.Drawing.Point(12, 96);
+            this.dgvGrades.Location = new System.Drawing.Point(57, 141);
+            this.dgvGrades.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvGrades.Name = "dgvGrades";
             this.dgvGrades.ReadOnly = true;
             this.dgvGrades.RowHeadersWidth = 102;
             this.dgvGrades.RowTemplate.Height = 40;
-            this.dgvGrades.Size = new System.Drawing.Size(776, 264);
+            this.dgvGrades.Size = new System.Drawing.Size(1071, 369);
             this.dgvGrades.TabIndex = 3;
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(107, 363);
+            this.lblTotal.Location = new System.Drawing.Point(144, 525);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(180, 32);
+            this.lblTotal.Size = new System.Drawing.Size(192, 39);
             this.lblTotal.TabIndex = 4;
             this.lblTotal.Text = "Total grades:";
             // 
             // lblAverage
             // 
             this.lblAverage.AutoSize = true;
-            this.lblAverage.Location = new System.Drawing.Point(483, 363);
+            this.lblAverage.Location = new System.Drawing.Point(779, 525);
             this.lblAverage.Name = "lblAverage";
-            this.lblAverage.Size = new System.Drawing.Size(215, 32);
+            this.lblAverage.Size = new System.Drawing.Size(229, 39);
             this.lblAverage.TabIndex = 5;
             this.lblAverage.Text = "Average grade: ";
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(333, 396);
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(470, 619);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(135, 42);
+            this.btnClose.Size = new System.Drawing.Size(229, 91);
             this.btnClose.TabIndex = 6;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -112,37 +126,56 @@
             // 
             // btnFeedback
             // 
-            this.btnFeedback.Location = new System.Drawing.Point(729, 433);
+            this.btnFeedback.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFeedback.Location = new System.Drawing.Point(937, 619);
+            this.btnFeedback.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFeedback.Name = "btnFeedback";
-            this.btnFeedback.Size = new System.Drawing.Size(170, 79);
+            this.btnFeedback.Size = new System.Drawing.Size(191, 94);
             this.btnFeedback.TabIndex = 9;
             this.btnFeedback.Text = "Feedback";
             this.btnFeedback.UseVisualStyleBackColor = true;
             this.btnFeedback.Click += new System.EventHandler(this.btnFeedback_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025.Properties.Resources.bg_main;
+            this.panel1.Controls.Add(this.lblTitle);
+            this.panel1.Controls.Add(this.btnClose);
+            this.panel1.Controls.Add(this.btnExportPdf);
+            this.panel1.Controls.Add(this.lblTotal);
+            this.panel1.Controls.Add(this.lblAverage);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1168, 752);
+            this.panel1.TabIndex = 10;
+            // 
             // FormReports
             // 
             this.AcceptButton = this.btnLoadReport;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(911, 524);
+            this.ClientSize = new System.Drawing.Size(1168, 752);
             this.Controls.Add(this.btnFeedback);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.lblAverage);
-            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.dgvGrades);
-            this.Controls.Add(this.btnExportPdf);
             this.Controls.Add(this.btnLoadReport);
-            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Times New Roman", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(600, 420);
             this.Name = "FormReports";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reports";
+            this.Load += new System.EventHandler(this.FormReports_Load);
+            this.Resize += new System.EventHandler(this.FormReports_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrades)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -156,5 +189,6 @@
         private System.Windows.Forms.Label lblAverage;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnFeedback;
+        private System.Windows.Forms.Panel panel1;
     }
 }

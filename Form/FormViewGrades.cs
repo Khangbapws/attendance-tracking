@@ -16,12 +16,13 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
     {
         private Size originalFormSize;
         private Dictionary<Control, Rectangle> controlBounds = new Dictionary<Control, Rectangle>();
+        private readonly string filePath;
 
         public FormViewGrades()
         {
             this.AutoScaleMode = AutoScaleMode.None; // Turn off WinForms auto-scaling
             this.AutoScaleDimensions = new SizeF(96F, 96F); //Lock DPI
-
+            filePath = AppPaths.GradesFile;
             InitializeComponent();
             LoadGrades();
         }
@@ -77,14 +78,9 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
             dgvGrades.Columns.Add("Subject", "Subject");
             dgvGrades.Columns.Add("Grade", "Grade");
 
-            string filePath = Path.Combine(
-                Application.StartupPath,
-                "grades.txt"
-            );
-
-            // If file does not exist
             if (!File.Exists(filePath))
             {
+                
                 MessageBox.Show("No grade data found.",
                                 "Information",
                                 MessageBoxButtons.OK,

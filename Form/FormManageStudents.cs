@@ -20,7 +20,9 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
         private Size originalFormSize;
         private Dictionary<Control, System.Drawing.Rectangle> controlBounds = new Dictionary<Control, System.Drawing.Rectangle>();
         
-        private string filePath = "students.txt";
+
+        private readonly string filePath;
+
 
         public FormManageStudents()
         {
@@ -28,7 +30,10 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
             this.AutoScaleDimensions = new SizeF(96F, 96F); //Lock DPI
 
             InitializeComponent();
+
+            filePath = AppPaths.StudentsFile;
             LoadStudents();
+            
         }
 
         private void FormManageStudents_Load(object sender, EventArgs e)
@@ -149,12 +154,19 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
         }
         private void dgvStudents_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                txtStudentId.Text = dgvStudents.Rows[e.RowIndex].Cells[0].Value.ToString();
-                txtStudentName.Text = dgvStudents.Rows[e.RowIndex].Cells[1].Value.ToString();
-                txtClass.Text = dgvStudents.Rows[e.RowIndex].Cells[2].Value.ToString();
-            }
+            if (e.RowIndex < 0 || e.RowIndex >= dgvStudents.Rows.Count)
+                return;
+
+            var row = dgvStudents.Rows[e.RowIndex];
+
+            
+            if (row.IsNewRow)
+                return;
+
+            
+            txtStudentId.Text = Convert.ToString(row.Cells["StudentId"].Value ?? "");
+            txtStudentName.Text = Convert.ToString(row.Cells["StudentName"].Value ?? "");
+            txtClass.Text = Convert.ToString(row.Cells["Class"].Value ?? "");
         }
         private void ClearInputs()
         {

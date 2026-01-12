@@ -14,8 +14,7 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
 {
     public partial class FormEnterGrades : Form
     {
-        string folderPath;
-        string gradesFilePath;
+        private readonly string gradesFilePath;
 
         private Size originalFormSize;
         private Dictionary<Control, Rectangle> controlBounds = new Dictionary<Control, Rectangle>();
@@ -26,14 +25,7 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
 
             InitializeComponent();
 
-            folderPath = Path.Combine(
-        Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
-        "ElectricGradeBook"
-        );
-            if (!Directory.Exists(folderPath))
-                Directory.CreateDirectory(folderPath);
-
-            gradesFilePath = Path.Combine(folderPath, "grades.txt");
+            gradesFilePath = AppPaths.GradesFile;
         }
 
         private void FormEnterGrades_Load(object sender, EventArgs e)

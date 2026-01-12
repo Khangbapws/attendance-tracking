@@ -14,7 +14,8 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
 {
     public partial class FormReports : Form
     {
-        string filePath = "grades.txt";
+        private readonly string filePath;
+
 
         private Size originalFormSize;
         private Dictionary<Control, Rectangle> controlBounds = new Dictionary<Control, Rectangle>();
@@ -27,6 +28,7 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
             InitializeComponent();
             InitializeGrid();
 
+            filePath = AppPaths.GradesFile;
             btnExportPdf.Enabled = false;
         }
 
@@ -80,7 +82,7 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
         private void btnLoadReport_Click(object sender, EventArgs e)
         {
             LoadGradesAndCalculate();
-            btnExportPdf.Enabled = true;
+            btnExportPdf.Enabled = (dgvGrades.Rows.Count > 0);
         }
 
         private void LoadGradesAndCalculate()

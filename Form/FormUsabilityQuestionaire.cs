@@ -1,4 +1,5 @@
-﻿using System;
+﻿using l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +17,7 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
         private Size originalFormSize;
         private Dictionary<Control, Rectangle> controlBounds = new Dictionary<Control, Rectangle>();
 
-        string filePath = "usability_feedback.txt";
+        private readonly string filePath;
         public FormUsabilityQuestionnaire()
         {
             this.AutoScaleMode = AutoScaleMode.None; // Turn off WinForms auto-scaling
@@ -24,7 +25,8 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
 
             InitializeComponent();
             InitializeComboBoxes();
-
+            
+            filePath = AppPaths.FeedbackFile;
             btnSubmit.Enabled = false;
         }
 
@@ -84,25 +86,12 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
                 cbo.DropDownStyle = ComboBoxStyle.DropDownList;
                 cbo.Items.AddRange(new object[] { 1, 2, 3, 4, 5 });
                 cbo.SelectedIndex = 2; // Default = Neutral (3)
+
+                cbo.SelectedIndexChanged -= cbo_SelectedIndexChanged;
+                cbo.SelectedIndexChanged += cbo_SelectedIndexChanged;
             }
         }
 
-        //private void btnSubmit_Click(object sender, EventArgs e)
-        //{
-        //    if (!AllQuestionsAnswered())
-        //    {
-        //        MessageBox.Show("Please answer all questions.",
-        //                        "Validation",
-        //                        MessageBoxButtons.OK,
-        //                        MessageBoxIcon.Warning);
-        //        return;
-        //    }
-
-        //    SaveFeedback();
-        //    MessageBox.Show("Thank you for your feedback!");
-
-        //    this.Close();
-        //}
         private bool AllQuestionsAnswered()
         {
             ComboBox[] combos =
@@ -121,29 +110,38 @@ namespace l11_danh_mục_điện_tử_để_chấm_điểm_học_sinh_14_12_2025
         }
         private void SaveFeedback()
         {
-            using (StreamWriter sw = new StreamWriter(filePath, true))
+            try
             {
-                sw.WriteLine(
-                    $"Q1={comboBox1.SelectedItem}|" +
-                    $"Q2={comboBox2.SelectedItem}|" +
-                    $"Q3={comboBox3.SelectedItem}|" +
-                    $"Q4={comboBox4.SelectedItem}|" +
-                    $"Q5={comboBox5.SelectedItem}|" +
-                    $"Q6={comboBox6.SelectedItem}|" +
-                    $"Q7={comboBox7.SelectedItem}|" +
-                    $"Q8={comboBox8.SelectedItem}"
-                );
 
-                sw.WriteLine("Feedback=" + txtFeedback.Text);
-                sw.WriteLine("Date=" + DateTime.Now.ToString("dd/MM/yyyy HH:mm"));
-                sw.WriteLine("--------------------------------------");
+                string folder = Path.GetDirectoryName(filePath);
+                if (!Directory.Exists(folder))
+                    Directory.CreateDirectory(folder);
+                using (StreamWriter sw = new StreamWriter(filePath, true))
+                {
+                    sw.WriteLine(
+                        $"Q1={comboBox1.SelectedItem}|" +
+                        $"Q2={comboBox2.SelectedItem}|" +
+                        $"Q3={comboBox3.SelectedItem}|" +
+                        $"Q4={comboBox4.SelectedItem}|" +
+                        $"Q5={comboBox5.SelectedItem}|" +
+                        $"Q6={comboBox6.SelectedItem}|" +
+                        $"Q7={comboBox7.SelectedItem}|" +
+                        $"Q8={comboBox8.SelectedItem}"
+                    );
+
+                    sw.WriteLine("Feedback=" + txtFeedback.Text);
+                    sw.WriteLine("Date=" + DateTime.Now.ToString("dd/MM/yyyy HH:mm"));
+                    sw.WriteLine("--------------------------------------");
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unable to save feedback: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        
         }
 
-        //private void btnClose_Click(object sender, EventArgs e)
-        //{
-        //    this.Close();
-        //}
+        
 
         private void cbo_SelectedIndexChanged(object sender, EventArgs e)
         {
